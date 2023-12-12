@@ -2,6 +2,7 @@
 
 import { projectsData } from "@/lib/data";
 import { motion, useScroll } from "framer-motion";
+import { BookOpenText, Github } from "lucide-react";
 import Image from "next/image";
 import { useRef } from "react";
 
@@ -11,6 +12,8 @@ export default function ProjectCard({
     description,
     tags,
     imageUrl,
+    live,
+    source,
 }: ProjectProps) {
     const ref = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
@@ -47,9 +50,25 @@ export default function ProjectCard({
                             );
                         })}
                     </ul>
-                    <p className="mt-2 leading-relaxed text-slate-700">
+                    <p className="mt-5 leading-relaxed text-slate-700 mb-6">
                         {description}
                     </p>
+                    <div className="flex flex-col gap-2 sm:gap-0 sm:flex-row justify-around">
+                        <a
+                            className="bg-slate-900 text-white text-xs px-5 py-3 rounded-sm cursor-pointer focus:scale-110 hover:scale-110 active:scale-105 transition-transform border"
+                            href={live}
+                        >
+                            Live Site
+                            <BookOpenText className="ml-3 inline-block" />
+                        </a>
+                        <a
+                            className="bg-slate-900 text-white text-xs px-5 py-3 rounded-sm cursor-pointer focus:scale-110 hover:scale-110 active:scale-105 transition-transform border"
+                            href={source}
+                        >
+                            Source Code
+                            <Github className="ml-3 inline-block" />
+                        </a>
+                    </div>
                 </div>
             </section>
         </motion.div>

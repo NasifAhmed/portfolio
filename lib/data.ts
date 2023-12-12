@@ -77,6 +77,8 @@ export const projectsData = [
             "Stripe",
         ],
         imageUrl: medicamp,
+        live: "https://medi-camp.web.app/",
+        source: "https://github.com/NasifAhmed/medi-camp-client",
     },
     {
         title: "Blog.it",
@@ -91,6 +93,8 @@ export const projectsData = [
             "Express",
         ],
         imageUrl: blogit,
+        live: "https://assignment-11-d1439.web.app/",
+        source: "https://github.com/NasifAhmed/blog-it-client",
     },
     {
         title: "Movie Ticket Hub",
@@ -107,6 +111,8 @@ export const projectsData = [
             "Stripe",
         ],
         imageUrl: movietickethub,
+        live: "https://movie-ticket-hub.web.app/",
+        source: "https://github.com/NasifAhmed/movie-ticket-hub",
     },
     {
         title: "Car Mania",
@@ -114,6 +120,8 @@ export const projectsData = [
             "This is a shopping website for different brands of cars with all the shop website features like cart management, advertisements etc.",
         tags: ["React", "Tailwind", "Daisy UI"],
         imageUrl: carmania,
+        live: "https://assignment10-7d9a2.web.app/",
+        source: "https://github.com/NasifAhmed/brand-shop-client",
     },
 ] as const;
 
