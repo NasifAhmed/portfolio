@@ -2,7 +2,10 @@ import SectionHeading from "./SectionHeading";
 
 export default function Contact() {
     return (
-        <section id="contact" className="mb-28 sm:mb-40 w-[min(100%,38rem)]">
+        <section
+            id="contact"
+            className="mb-28 sm:mb-40 w-[min(100%,38rem)] scroll-mt-28"
+        >
             <SectionHeading text="Contact Me" />
             <p className="text-slate-700 text-center">
                 Please contact me directly at{" "}
