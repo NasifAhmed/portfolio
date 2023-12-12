@@ -1,20 +1,19 @@
 import { projectsData } from "@/lib/data";
 import SectionHeading from "./SectionHeading";
+import Image from "next/image";
+import { useScroll } from "framer-motion";
+import { useRef } from "react";
+import ProjectCard from "./ProjectCard";
 
 export default function Projects() {
     return (
         <section>
             <SectionHeading text="My Projects" />
-            <div>
+            <div className="space-y-10">
                 {projectsData.map((project, index) => {
                     return <ProjectCard {...project} key={index} />;
                 })}
             </div>
         </section>
     );
-}
-
-type ProjectProps = (typeof projectsData)[number];
-function ProjectCard({ title, description, tags, imageUrl }: ProjectProps) {
-    return <div>{title}</div>;
 }
