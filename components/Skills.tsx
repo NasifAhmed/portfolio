@@ -22,7 +22,7 @@ export default function Skills() {
     return (
         <section
             id="skills"
-            className="mb-28 sm:mb-40 max-w-3xl scroll-mt-28 text-center"
+            className="mb-28 sm:mb-40 max-w-3xl scroll-mt-36 sm:scroll-mt-28 text-center"
         >
             <SectionHeading text="My Skills" />
             <ul className="flex flex-wrap justify-center items-center gap-2 text-lg text-slate-800">
