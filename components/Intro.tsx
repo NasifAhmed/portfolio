@@ -7,7 +7,10 @@ import { ChevronsDown, Download, Github, Linkedin } from "lucide-react";
 
 export default function Intro() {
     return (
-        <section className="flex flex-col space-y-10 items-center justify-center mb-28 sm:mb-0">
+        <section
+            className="flex flex-col space-y-10 items-center justify-center mb-28 sm:mb-0 scroll-mt-[100rem]"
+            id="home"
+        >
             <motion.h1
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
