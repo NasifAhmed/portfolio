@@ -16,14 +16,26 @@ export default function About() {
         >
             <SectionHeading text="About Me" />
             <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi,
-                minus. Culpa totam dicta odit suscipit, exercitationem fugit
-                accusamus harum eos inventore, fuga nesciunt amet enim odio.
-                Iusto nemo libero dicta.
+                {`I am a passionate new full stack developer from `}
+                <span className="font-semibold">Dhaka, Bangladesh</span>
+                {` . I develop fully featured well-structured `}
+                <span className="font-semibold">websites/webapps</span>
+                {` with latest available technology. I aspire to become a successful `}
+                <span className="font-semibold">
+                    web developer/ software engineer
+                </span>
+                {` in future. Exploring, learning and tinkring with latest technology speically in the web development field is my hobby.`}
             </p>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex,
-                officiis?
+                {`My favorite technology to use are `}
+                <span className="font-bold">React</span>
+                {`, `}
+                <span className="font-bold">NextJS</span>
+                {`, `}
+                <span className="font-bold">Tailwind</span>
+                {` and `}
+                <span className="font-bold">Typescript</span>
+                {`. I also love Linux, Neovim and FOSS culture.`}
             </p>
         </motion.section>
     );
