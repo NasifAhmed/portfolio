@@ -26,7 +26,7 @@ export default function About() {
                 </span>
                 {` in future. Exploring, learning and tinkring with latest technology speically in the web development field is my hobby.`}
             </p>
-            <p>
+            <p className="mt-3">
                 {`My favorite technology to use are `}
                 <span className="font-bold">React</span>
                 {`, `}
