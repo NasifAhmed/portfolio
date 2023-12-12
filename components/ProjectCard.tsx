@@ -24,7 +24,6 @@ export default function ProjectCard({
                 scale: scrollYProgress,
                 opacity: scrollYProgress,
             }}
-            className="mb-28"
         >
             <section className="bg-slate-100 max-w-2xl border border-black/5 rounded-sm shadow-md">
                 <div className="w-fll max-h-60 overflow-hidden">
