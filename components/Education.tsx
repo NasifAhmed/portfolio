@@ -7,7 +7,7 @@ import isc_logo from "@/public/isc_logo.png";
 export default function Education() {
     return (
         <section
-            id="contact"
+            id="education"
             className="mb-28 sm:mb-40 w-[min(100%,38rem)] scroll-mt-36 sm:scroll-mt-28 space-y-8"
         >
             <SectionHeading text="Education" />
