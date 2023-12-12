@@ -4,7 +4,7 @@ export default function Contact() {
     return (
         <section id="contact" className="mb-28 sm:mb-40 w-[min(100%,38rem)]">
             <SectionHeading text="Contact Me" />
-            <p className="text-slate-700">
+            <p className="text-slate-700 text-center">
                 Please contact me directly at{" "}
                 <a
                     href="mailto:nasif2ahmed@gmail.com"
