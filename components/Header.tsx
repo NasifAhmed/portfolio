@@ -3,8 +3,11 @@
 import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Header() {
+    const [activeSection, setActiveSection] = useState("Home");
+
     return (
         <header className="z-50 relative">
             <motion.div
@@ -17,16 +20,34 @@ export default function Header() {
                         {links.map((link) => {
                             return (
                                 <motion.li
-                                    className="h-3/4 flex items-center justify-center"
+                                    className="h-3/4 flex items-center justify-center relative"
                                     key={link.hash}
                                     initial={{ y: -100, opacity: 0 }}
                                     animate={{ y: 0, opacity: 1 }}
                                 >
                                     <Link
-                                        className="flex w-full items-center justify-center px-3 py-1 md:py-3 hover:text-slate-950 transition-colors"
+                                        className={`flex w-full items-center justify-center px-3 py-1 md:py-3 hover:text-slate-950 transition-all ${
+                                            activeSection === link.name
+                                                ? `text-slate-950 text-base`
+                                                : ""
+                                        }`}
                                         href={link.hash}
+                                        onClick={() => {
+                                            setActiveSection(link.name);
+                                        }}
                                     >
                                         {link.name}
+                                        {link.name === activeSection && (
+                                            <motion.span
+                                                className="bg-slate-200 rounded-md absolute inset-0 -z-10"
+                                                layoutId="activeSection"
+                                                transition={{
+                                                    type: "spring",
+                                                    stiffness: 380,
+                                                    damping: 30,
+                                                }}
+                                            ></motion.span>
+                                        )}
                                     </Link>
                                 </motion.li>
                             );
