@@ -13,12 +13,13 @@ export default function ProjectCardMobile({
 }: ProjectProps) {
     return (
         <div>
-            <section className="bg-slate-100 max-w-2xl border border-black/5 rounded-sm shadow-md">
-                <div className="w-fll max-h-40 overflow-hidden">
+            <section className="bg-slate-100 max-w-2xl border border-black/10 rounded-sm shadow-md">
+                <div className="w-fll max-h-40 overflow-hidden mx-3 mt-3 rounded-t-lg border-t border-x border-black/5">
                     <Image
                         src={imageUrl}
                         alt="Project I worked on"
                         quality={95}
+                        className="rounded-t-lg"
                     />
                 </div>
                 <div className="p-8 border-t">

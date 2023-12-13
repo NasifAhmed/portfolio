@@ -28,15 +28,16 @@ export default function ProjectCard({
                 opacity: scrollYProgress,
             }}
         >
-            <section className="bg-slate-100 max-w-2xl border border-black/5 rounded-sm shadow-md">
-                <div className="w-fll max-h-60 overflow-hidden">
+            <section className="bg-slate-100 max-w-2xl border border-black/10 rounded-sm shadow-md">
+                <div className="w-fll max-h-60 overflow-hidden mx-3 mt-3 rounded-t-lg border-t border-x border-black/5">
                     <Image
                         src={imageUrl}
                         alt="Project I worked on"
                         quality={95}
+                        className="rounded-t-lg"
                     />
                 </div>
-                <div className="p-10 border-t">
+                <div className="p-10 border-t border-black/10">
                     <h3 className="text-2xl font-semibold">{title}</h3>
                     <ul className="flex gap-3 flex-wrap mt-3">
                         {tags.map((tag, index) => {
