@@ -1,7 +1,8 @@
 "use client";
 
-import SectionHeading from "./SectionHeading";
 import { sendEmail } from "@/actions/sendEmail";
+import SectionHeading from "./SectionHeading";
+import SubmitBtn from "./SubmitBtn";
 
 export default function Contact() {
     return (
@@ -23,8 +24,14 @@ export default function Contact() {
             <form
                 className="flex flex-col gap-3 w-full mt-8"
                 action={async (formData) => {
-                    await sendEmail(formData);
+                    await sendEmail(formData).then(() => {
+                        const form = document.getElementById(
+                            "form"
+                        ) as HTMLFormElement;
+                        form.reset();
+                    });
                 }}
+                id="form"
             >
                 <input
                     className="h-14 rounded-sm border border-black/10 px-4"
@@ -42,12 +49,7 @@ export default function Contact() {
                     required
                     maxLength={5000}
                 ></textarea>
-                <button
-                    className="h-[3rem] w-[8rem] bg-slate-900 text-white rounded-sm outline-none transition-all focus:scale-110 hover:scale-110 active:scale-105 "
-                    type="submit"
-                >
-                    Submit
-                </button>
+                <SubmitBtn />
             </form>
         </section>
     );
