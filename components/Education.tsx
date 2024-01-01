@@ -20,7 +20,7 @@ export default function Education() {
                     <h4 className="text-base">BRAC University</h4>
                 </div>
             </div>
-            <div className="flex justify-center items-center gap-5">
+{/*             <div className="flex justify-center items-center gap-5">
                 <div className="w-40 flex justify-center items-center">
                     <Image
                         src={dc_logo}
@@ -45,7 +45,7 @@ export default function Education() {
                     <h3 className="text-lg">Secondary School Certificate</h3>
                     <h4 className="text-base">Ideal school and college</h4>
                 </div>
-            </div>
+            </div> */}
         </section>
     );
 }
